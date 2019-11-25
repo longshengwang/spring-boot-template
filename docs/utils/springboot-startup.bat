@@ -9,7 +9,7 @@ echo ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 set /p NEW_PROJECT_NAME=Enter new project name:
 
 echo Processing ...
-git clone https://gitee.com/shepherdviolet/spring-boot-template.git %NEW_PROJECT_NAME% && cd %NEW_PROJECT_NAME% && rd /q /s .git && echo Finished
+git clone https://github.com/shepherdviolet/spring-boot-template.git %NEW_PROJECT_NAME% && cd %NEW_PROJECT_NAME% && rd /q /s .git && echo Finished
 
 echo ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 echo Read '%NEW_PROJECT_NAME%\README.md' to create sub-project automatically

@@ -20,7 +20,7 @@
 * 浏览器访问如下地址, 手动下载`sprintboot-startup.bat`脚本:
 
 ```text
-https://gitee.com/shepherdviolet/spring-boot-template/raw/master/docs/utils/springboot-startup.bat
+https://raw.githubusercontent.com/shepherdviolet/spring-boot-template/master/docs/utils/springboot-startup.bat
 ```
 
 * 执行下载来的脚本`sprintboot-startup.bat`, 输入新工程名称, 控制台输出如下:
@@ -49,7 +49,7 @@ Read 'new-project-name\README.md' to create sub-project automatically
 * 命令行执行如下命令, 其中`new-project-name`为新工程名称, P.S. Windows环境用cmder也可以这么做
 
 ```text
-curl -L https://gitee.com/shepherdviolet/spring-boot-template/raw/master/docs/utils/springboot-startup.sh | sh -s new-project-name
+curl -L https://raw.githubusercontent.com/shepherdviolet/spring-boot-template/master/docs/utils/springboot-startup.sh | sh -s new-project-name
 ```
 
 * 输入新工程名称, 等待新工程创建完毕
@@ -57,7 +57,7 @@ curl -L https://gitee.com/shepherdviolet/spring-boot-template/raw/master/docs/ut
 
 ### 其他环境新建工程(手动)
 
-* 克隆: `git clone https://gitee.com/shepherdviolet/spring-boot-template.git new-project-name`
+* 克隆: `git clone https://github.com/shepherdviolet/spring-boot-template.git new-project-name`
 * 删除新工程目录下的`.git`(删除原来模板工程的版本数据)
 * Done!
 
