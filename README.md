@@ -141,3 +141,36 @@ gradlew bootJar
 ```text
 java -Dspring.profiles.active=linux -Denv=dev -Dlog.path=/your-path/logs -Dserver.tomcat.basedir=/your-path/tmp -jar your-project-name.jar
 ```
+
+<br>
+<br>
+
+# IntelliJ IDEA配置建议
+
+### 运行应用前编译全工程
+
+* IntelliJ在运行应用时, 默认只会编译`当前`子工程, 不会编译它依赖的子工程. 为了避免代码修改不生效的问题, 我们需要改成编译全工程. 
+
+```text
+找到运行应用的地方 -- Edit Configurations... -- 左边'Templates'里找到'Application'和'Spring Boot', 
+把他们的'Before Launch'从'Build'改成'Build Project'
+
+找到运行应用的地方 -- Edit Configurations... -- 选择你的应用启动配置, 
+把他们的'Before Launch'从'Build'改成'Build Project'
+```
+
+### 设置编码
+
+```text
+File -- Settings -- Editor-- File Encodings
+全都改成UTF-8, 把'Transparent native-to-ascii conversion'勾上
+
+File -- Settings -- Tools -- SSH Terminal
+修改为UTF-8
+```
+
+### 检测和生成Serializable类的serialVersionUID
+
+```text
+File -- Settings -- Editor -- Inspections -- Serialization issues[在java类目下] -> 选中 Serializable class without 'serialVersionUID'
+```

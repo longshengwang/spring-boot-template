@@ -85,22 +85,22 @@ spring:
 #      enabled: true
 #      charset: UTF-8
 #      force: true
-  cloud:
-    ## Sentinel client, https://github.com/alibaba/spring-cloud-alibaba/wiki/Sentinel, DefaultLog: ${user.home}/logs/csp
-    sentinel:
-      enabled: true
-      transport:
-        ## dashboard address
-        dashboard: localhost:60000
-        ## client will listen this port to receive control command, Port conflicts will automatically avoid
-        port: 60001
-        ## Used to let the dashboard find itself. For Linux environment, please set the host name and host IP if you want to get the client-ip automatically.
-#        client-ip: 127.0.0.1
-#      metric:
-#        file-single-size: 52428800
-#        file-total-count: 6
-#      log:
-#        dir: logs/
+  ## Sentinel client, https://github.com/alibaba/spring-cloud-alibaba/wiki/Sentinel, DefaultLog: ${user.home}/logs/csp
+#  cloud:
+#    sentinel:
+#      enabled: true
+#      transport:
+#        ## dashboard address
+#        dashboard: localhost:60000
+#        ## client will listen this port to receive control command, Port conflicts will automatically avoid
+#        port: 60001
+#        ## Used to let the dashboard find itself. For Linux environment, please set the host name and host IP if you want to get the client-ip automatically.
+#        #client-ip: 127.0.0.1
+#      #metric:
+#        #file-single-size: 52428800
+#        #file-total-count: 6
+#      #log:
+#        #dir: logs/
   ## Spring Boot Admin config (Config in client)
 #  boot:
 #    admin:
@@ -157,8 +157,8 @@ management:
 slate:
   common:
     servlet-context-listener-enabled: true
-    ez-sentinel:
-      rule-data: classpath:config/demo/sentinel/rules.json
+#    ez-sentinel:
+#      rule-data: classpath:config/demo/sentinel/rules.json
 #  httpclient:
 #    enabled: true
 #    apollo-support: true

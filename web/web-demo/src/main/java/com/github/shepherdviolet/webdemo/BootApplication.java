@@ -33,7 +33,7 @@ import org.springframework.context.annotation.ComponentScan;
         "com.github.shepherdviolet.webdemo.demo.mybatis.config",
         "com.github.shepherdviolet.webdemo.demo.micrometer.config",
         "com.github.shepherdviolet.webdemo.demo.schedule.config",
-        "com.github.shepherdviolet.webdemo.demo.sentinel.config",
+//        "com.github.shepherdviolet.webdemo.demo.sentinel.config",
 //        "com.github.shepherdviolet.webdemo.demo.apollo.config",
 //        "com.github.shepherdviolet.webdemo.demo.rocketmq.config",
 })

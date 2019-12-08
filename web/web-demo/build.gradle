@@ -67,7 +67,8 @@ dependencies {
 
     //Flow control, Circuit breaking//////////////////////////////////////////////////////////////////
 
-    implementation "com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel:$version_sentinel"
+    //熔断限流, 启用: application.yaml(两个地方解开注释) SentinelController(解开注释) BootApplication(解开注释)
+//    implementation "com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel:$version_sentinel"
 
     //Spring Boot Admin///////////////////////////////////////////////////////////////////////////////
 
