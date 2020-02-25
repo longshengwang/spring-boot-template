@@ -71,33 +71,33 @@ curl -L https://raw.githubusercontent.com/shepherdviolet/spring-boot-template/ma
 ```text
 // 子工程创建器配置
 ext.project_creator = [
-		// 需要创建的子工程清单
-		'projects': [
-				// [KEY修改] 子工程路径
-				'web/web-new': [
-						// [VALUE修改] 原型路径
-						'archetype_path': 'web/web-archetype',
-						'replace_context': [
-								// [KEY/VALUE修改] 自定义参数
-								// 包路径
-								'java_package': 'com.test.webnew',
-								// 主类名
-								'application_class': 'WebNewApplication',
-								// app.id
-								'app_id': 'web-new'
-						]
-				],
-				// [KEY修改] 子工程路径
-				'module/module-new': [
-						// [VALUE修改] 原型路径
-						'archetype_path': 'module/module-archetype',
-						'replace_context': [
-								// [KEY/VALUE修改] 自定义参数
-								// 包路径
-								'java_package': 'com.test.modulenew'
-						]
-				]
-		]
+        // 需要创建的子工程清单
+        'projects': [
+                // [KEY修改] 子工程路径
+                'web/web-new': [
+                        // [VALUE修改] 原型路径
+                        'archetype_path': 'web/web-archetype',
+                        'replace_context': [
+                                // [KEY/VALUE修改] 自定义参数
+                                // 包路径
+                                'java_package': 'com.test.webnew',
+                                // 主类名
+                                'application_class': 'WebNewApplication',
+                                // app.id
+                                'app_id': 'web-new'
+                        ]
+                ],
+                // [KEY修改] 子工程路径
+                'module/module-new': [
+                        // [VALUE修改] 原型路径
+                        'archetype_path': 'module/module-archetype',
+                        'replace_context': [
+                                // [KEY/VALUE修改] 自定义参数
+                                // 包路径
+                                'java_package': 'com.test.modulenew'
+                        ]
+                ]
+        ]
 ]
 
 // [必须] 引入创建子工程的Gradle脚本

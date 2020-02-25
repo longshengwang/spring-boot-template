@@ -25,7 +25,7 @@ import sviolet.slate.common.helper.mybatis.monitor.MybatisTxTimerPlugin;
         "com.github.shepherdviolet.webdemo.demo.mybatis.controller",
         "com.github.shepherdviolet.webdemo.demo.mybatis.service",
 })
-//启用@Transactional注解
+//启用@Transactional注解(Springboot2以上默认开启CGLIB, 即使这里是false)
 @EnableTransactionManagement(proxyTargetClass = true)
 //扫描Mapper类
 @MapperScan({

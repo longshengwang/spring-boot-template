@@ -14,7 +14,7 @@ import sviolet.slate.common.x.proxy.interfaceinst.EnableInterfaceInstantiation;
         "com.github.shepherdviolet.webdemo.demo.annoproxy.service",
         "com.github.shepherdviolet.webdemo.demo.annoproxy.rpcservice"
 })
-//启用FakeRpc并使用CGLIB代理
+//启用FakeRpc并使用CGLIB代理(Springboot2以上默认开启CGLIB, 即使这里是false)
 @EnableFakeRpc(basePackages = "com.github.shepherdviolet.webdemo.demo.annoproxy.rpcservice", proxyTargetClass = true)
 //实例化com.github.shepherdviolet.webdemo.demo.annoproxy.rpcservice路径下的接口
 @EnableInterfaceInstantiation(basePackages = {"com.github.shepherdviolet.webdemo.demo.annoproxy.rpcservice"})

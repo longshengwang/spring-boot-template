@@ -13,7 +13,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
         "com.github.shepherdviolet.webdemo.demo.aspectj.service",
         "com.github.shepherdviolet.webdemo.demo.aspectj.aspect"
 })
-//启用AspectJ并用CGLIB做代理
+//启用AspectJ并用CGLIB做代理(Springboot2以上默认开启CGLIB, 即使这里是false)
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 public class AspectJConfiguration {
 
