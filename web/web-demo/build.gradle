@@ -5,8 +5,8 @@ dependencies {
     //Import BOM/////////////////////////////////////////////////////////////////////////////////////////////
 
 //    implementation platform(project(':my-bom'))
-//    implementation platform("com.github.shepherdviolet.slate20:slate-bom:$version_slate")
-//    implementation enforcedPlatform("com.github.shepherdviolet.slate20:slate-bom:$version_slate")//强制覆盖手动依赖的版本
+//    implementation platform("com.github.shepherdviolet.slate20:slate-bom:$version_thistle_slate")
+//    implementation enforcedPlatform("com.github.shepherdviolet.slate20:slate-bom:$version_thistle_slate")//强制覆盖手动依赖的版本
 
     //Log/////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -33,8 +33,9 @@ dependencies {
 
     //Optional 3rd library/////////////////////////////////////////////////////////////////////////////
 
-    implementation "com.github.shepherdviolet.slate20:slate-helper:$version_slate"
-    implementation "com.github.shepherdviolet.slate20:slate-http-client:$version_slate"
+    implementation "com.github.shepherdviolet.slate20:slate-helper:$version_thistle_slate"
+    implementation "com.github.shepherdviolet.slate20:slate-http-client:$version_thistle_slate"
+    implementation "com.github.shepherdviolet.thistle20:thistle-trace:$version_thistle_slate"
     implementation "com.alibaba:hessian-lite:$version_hessian_lite"
     implementation "com.google.code.gson:gson:$version_gson"
     implementation ("com.alibaba:fastjson:$version_fastjson") { force = true }//Fix security bugs of fastjson
