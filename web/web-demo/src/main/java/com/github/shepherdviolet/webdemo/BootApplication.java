@@ -82,7 +82,7 @@ public class BootApplication {
 
 //    /**
 //     * 配置Slate监听器(可选)
-//     * 依赖了com.github.shepherdviolet.slate20:slate-springboot后, 无需手动配置
+//     * 依赖了com.github.shepherdviolet:slate-springboot后, 无需手动配置
 //     */
 //    @Bean
 //    public ServletContextListener slateServletContextListener() {

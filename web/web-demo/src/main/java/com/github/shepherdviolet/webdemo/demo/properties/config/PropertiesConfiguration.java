@@ -1,9 +1,12 @@
 package com.github.shepherdviolet.webdemo.demo.properties.config;
 
+import org.springframework.beans.factory.config.PropertiesFactoryBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.io.ClassPathResource;
 import sviolet.slate.common.spring.property.OptionalYamlPropertySourceFactory;
 
 /**
@@ -41,5 +44,17 @@ public class PropertiesConfiguration {
 //        configurer.setProperties(yamlPropertiesFactoryBean.getObject());
 //        return configurer;
 //    }
+
+    /**
+     * 把指定properties文件加载为"Properties"实例
+     */
+    @Bean(name = "myProperties")
+    public static PropertiesFactoryBean artifactMapping() {
+        PropertiesFactoryBean propertiesFactoryBean = new PropertiesFactoryBean();
+        propertiesFactoryBean.setLocations(new ClassPathResource("config/demo/properties/general.properties"));
+        propertiesFactoryBean.setIgnoreResourceNotFound(true);
+        propertiesFactoryBean.setFileEncoding("UTF-8");
+        return propertiesFactoryBean;
+    }
 
 }

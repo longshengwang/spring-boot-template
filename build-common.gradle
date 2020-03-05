@@ -31,10 +31,10 @@ configure(subprojects.findAll { it.PROJECT_GROUP == 'web' }) {
 //    dependencies {
 //        // Import BOMs
 //        implementation platform(project(':my-bom'))
-//        implementation platform("com.github.shepherdviolet.slate20:slate-bom:$version_thistle_slate")
-//        implementation enforcedPlatform("com.github.shepherdviolet.slate20:slate-bom:$version_thistle_slate")//强制覆盖手动依赖的版本
+//        implementation platform("com.github.shepherdviolet:slate-bom:$version_thistle_slate")
+//        implementation enforcedPlatform("com.github.shepherdviolet:slate-bom:$version_thistle_slate")//强制覆盖手动依赖的版本
 //        // Common dependencies
-//        implementation "com.github.shepherdviolet.slate20:slate-common:$version_thistle_slate"
+//        implementation "com.github.shepherdviolet:slate-common:$version_thistle_slate"
 //    }
 
 }
@@ -55,10 +55,10 @@ configure(subprojects.findAll { it.PROJECT_GROUP in ['module'] }) {
 //    dependencies {
 //        // Import BOMs
 //        api platform(project(':my-bom'))
-//        api platform("com.github.shepherdviolet.slate20:slate-bom:$version_thistle_slate")
-//        api enforcedPlatform("com.github.shepherdviolet.slate20:slate-bom:$version_thistle_slate")//强制覆盖手动依赖的版本
+//        api platform("com.github.shepherdviolet:slate-bom:$version_thistle_slate")
+//        api enforcedPlatform("com.github.shepherdviolet:slate-bom:$version_thistle_slate")//强制覆盖手动依赖的版本
 //        // Common dependencies
-//        api "com.github.shepherdviolet.slate20:slate-common:$version_thistle_slate"
+//        api "com.github.shepherdviolet:slate-common:$version_thistle_slate"
 //    }
 
 }
@@ -183,9 +183,9 @@ configure(subprojects.findAll { it.PROJECT_GROUP in ['module'] }) {
 //
 //    dependencies {
 //        // 可选: 如果需要BOM, 则需要专门为scriptJar引入
-//        //scriptJar platform('com.github.shepherdviolet.thistle20:thistle-bom:14.9-SNAPSHOT')
+//        //scriptJar platform('com.github.shepherdviolet:thistle-bom:14.9-SNAPSHOT')
 //        // 文件所在JAR包
-//        scriptJar ('com.github.shepherdviolet.thistle20:thistle-common:14.9-SNAPSHOT') { transitive = false }
+//        scriptJar ('com.github.shepherdviolet:thistle-common:14.9-SNAPSHOT') { transitive = false }
 //    }
 //
 //    task copyScriptsFromJar(type: Copy) {

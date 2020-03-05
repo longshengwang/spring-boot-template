@@ -11,8 +11,8 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-thymeleaf:$version_spring_boot"
     implementation "org.springframework.boot:spring-boot-starter-aop:$version_spring_boot"
     implementation "org.springframework.boot:spring-boot-starter-actuator:$version_spring_boot"
-    implementation "com.github.shepherdviolet.slate20:slate-common:$version_thistle_slate"
-    implementation "com.github.shepherdviolet.thistle20:thistle-trace:$version_thistle_slate"
+    implementation "com.github.shepherdviolet:slate-common:$version_thistle_slate"
+    implementation "com.github.shepherdviolet:thistle-trace:$version_thistle_slate"
 
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor:$version_spring_boot"
 
