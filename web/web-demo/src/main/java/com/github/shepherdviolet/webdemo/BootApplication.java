@@ -37,7 +37,7 @@ import org.springframework.context.annotation.ComponentScan;
 //        "com.github.shepherdviolet.webdemo.demo.apollo.config",
 //        "com.github.shepherdviolet.webdemo.demo.rocketmq.config",
 })
-//Spring Boot Admin server (控制台服务端, 容器需改为Tomcat, 控制台地址: http://localhost:8080)
+//Spring Boot Admin server (控制台服务端, 容器需改为Tomcat, 控制台地址: http://localhost:8080, 可以改URL, 见application.yaml)
 //@EnableAdminServer
 public class BootApplication {
 

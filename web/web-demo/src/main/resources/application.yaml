@@ -30,9 +30,23 @@ spring:
     schema: classpath:config/demo/mybatis/h2init/schema.sql
     data: classpath:config/demo/mybatis/h2init/data.sql
     initialization-mode: always
-  ## Datasource 2: Mysql (Do not exclude DataSourceAutoConfiguration!)
+  ## Datasource 2: Mysql 8 (Do not exclude DataSourceAutoConfiguration!)
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    #In startup bat: spring.datasource.url="jdbc:mysql://..."
+#    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Hongkong
+#    username: test
+#    password: test
+#    initial-size: 5
+#    min-idle: 5
+#    max-idle: 50
+#    max-active: 50
+#    max-wait: 5000
+#    validation-query: SELECT 1 FROM DUAL
+  ## Datasource 3: Mysql 5 (Do not exclude DataSourceAutoConfiguration!)
 #  datasource:
 #    driver-class-name: com.mysql.jdbc.Driver
+#    #In startup bat: spring.datasource.url="jdbc:mysql://..."
 #    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
 #    username: test
 #    password: test
@@ -42,7 +56,7 @@ spring:
 #    max-active: 50
 #    max-wait: 5000
 #    validation-query: SELECT 1 FROM DUAL
-  ## Datasource 3: Oracle (Do not exclude DataSourceAutoConfiguration!)
+  ## Datasource 4: Oracle (Do not exclude DataSourceAutoConfiguration!)
 #  datasource:
 #    driver-class-name: oracle.jdbc.OracleDriver
 #    url: jdbc:oracle:thin:@127.0.0.1:1521:ORCL
@@ -54,7 +68,7 @@ spring:
 #    max-active: 50
 #    max-wait: 5000
 #    validation-query: SELECT 1 FROM DUAL
-  ## Datasource 4: Oracle with org.apache.tomcat:tomcat-jdbc (Do not exclude DataSourceAutoConfiguration!)
+  ## Datasource 5: Oracle with org.apache.tomcat:tomcat-jdbc (Do not exclude DataSourceAutoConfiguration!)
 #  datasource:
 #    type: org.apache.tomcat.jdbc.pool.DataSource
 #    driver-class-name: oracle.jdbc.driver.OracleDriver
@@ -101,12 +115,14 @@ spring:
 #        #file-total-count: 6
 #      #log:
 #        #dir: logs/
-  ## Spring Boot Admin config (Config in client)
+  ## Spring Boot Admin config (Config in client, 'spring.boot.admin.context-path' config in server)
 #  boot:
 #    admin:
+#    #context-path: /admin
 #      client:
 #        ## The url of admin server
-#        url: http://localhost:8080
+#        url: http://localhost:${server.port:8080}
+#        #url: http://localhost:${server.port:8080}/admin
 
 #####################################################################
 

@@ -46,9 +46,10 @@ dependencies {
     implementation ("org.mybatis.spring.boot:mybatis-spring-boot-starter:$version_mybatis") {exclude group: 'org.springframework.boot'}
     implementation ("com.github.pagehelper:pagehelper-spring-boot-starter:$version_pagehelper") {exclude group: 'org.mybatis.spring.boot'}
     implementation 'com.h2database:h2:1.4.197'//H2, 配合Datasource 1
-//    implementation 'mysql:mysql-connector-java:5.1.46'//mysql, 配合Datasource 2
-//    implementation 'com.oracle:ojdbc6:11.2.0.3'//oracle, 在jcenter有, 配合Datasource 3 / 4
-//    implementation 'org.apache.tomcat:tomcat-jdbc:9.0.17'//tomcat连接池, 配合Datasource 4
+//    implementation 'mysql:mysql-connector-java:8.0.20'//mysql, 配合Datasource 2
+//    implementation 'mysql:mysql-connector-java:5.1.46'//mysql, 配合Datasource 3
+//    implementation 'com.oracle:ojdbc6:11.2.0.3'//oracle, 在jcenter有, 配合Datasource 4 / 5
+//    implementation 'org.apache.tomcat:tomcat-jdbc:9.0.17'//tomcat连接池, 配合Datasource 5
 
     //MQ//////////////////////////////////////////////////////////////////////////////////////////////
 
