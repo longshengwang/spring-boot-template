@@ -55,7 +55,7 @@ dependencies {
 
     implementation ("org.apache.rocketmq:rocketmq-client:$version_rocketmq") {
         //特殊情况: 在这里SpringBootAdmin和RocketMQ的netty包有冲突, 要启用Admin得先把RocketMQ依赖的netty排除掉(错误:java.lang.NoSuchMethodError: io.netty.bootstrap.Bootstrap.config)
-//        exclude group: "io.netty"
+        exclude group: "io.netty"
     }
 //    implementation "org.apache.rocketmq:rocketmq-spring-boot-starter:$version_rocketmq_spring"//官方的工具库, 可选
 
@@ -77,9 +77,9 @@ dependencies {
 
     //Spring Boot Admin server (控制台服务端, 容器需改为Tomcat, http://localhost:8080)
     //特殊情况: 在这里SpringBootAdmin和RocketMQ的netty包有冲突, 要启用这个先把RocketMQ依赖的netty排除掉(错误:java.lang.NoSuchMethodError: io.netty.bootstrap.Bootstrap.config)
-//    implementation "de.codecentric:spring-boot-admin-starter-server:$version_spring_boot_admin"
+    implementation "de.codecentric:spring-boot-admin-starter-server:$version_spring_boot_admin"
     //Spring Boot Admin client (控制台客户端)
-//    implementation "de.codecentric:spring-boot-admin-starter-client:$version_spring_boot_admin"
+    implementation "de.codecentric:spring-boot-admin-starter-client:$version_spring_boot_admin"
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////
     //annotationProcessor//////////////////////////////////////////////////////////////////////////////

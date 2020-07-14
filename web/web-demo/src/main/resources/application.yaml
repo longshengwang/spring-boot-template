@@ -21,6 +21,14 @@ spring:
     view:
       prefix: /
       suffix: .html
+  ## Spring Boot Admin config
+  boot:
+    admin:
+      ## Config in server, admin url adjusted from http://localhost:port to http://localhost:port/admin
+      context-path: /admin
+      client:
+        ## The url of admin server, config in client, admin url adjusted from http://localhost:port to http://localhost:port/admin
+        url: http://localhost:${server.port:8080}/admin
   ## Datasource 1: H2 (Do not exclude DataSourceAutoConfiguration!)
   datasource:
     driver-class-name: org.h2.Driver
@@ -33,7 +41,7 @@ spring:
   ## Datasource 2: Mysql 8 (Do not exclude DataSourceAutoConfiguration!)
 #  datasource:
 #    driver-class-name: com.mysql.cj.jdbc.Driver
-#    #In startup bat: spring.datasource.url="jdbc:mysql://..."
+#    #In startup bat: spring.datasource.url="jdbc:mysql://...". Set 'cachePrepStmts=false' if connect to ProxySQL.
 #    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Hongkong
 #    username: test
 #    password: test
@@ -115,14 +123,6 @@ spring:
 #        #file-total-count: 6
 #      #log:
 #        #dir: logs/
-  ## Spring Boot Admin config (Config in client, 'spring.boot.admin.context-path' config in server)
-#  boot:
-#    admin:
-#    #context-path: /admin
-#      client:
-#        ## The url of admin server
-#        url: http://localhost:${server.port:8080}
-#        #url: http://localhost:${server.port:8080}/admin
 
 #####################################################################
 

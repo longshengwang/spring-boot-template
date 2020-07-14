@@ -1,5 +1,6 @@
 package com.github.shepherdviolet.webdemo;
 
+import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.embedded.tomcat.ConfigurableTomcatWebServerFactory;
@@ -37,8 +38,8 @@ import org.springframework.context.annotation.ComponentScan;
 //        "com.github.shepherdviolet.webdemo.demo.apollo.config",
 //        "com.github.shepherdviolet.webdemo.demo.rocketmq.config",
 })
-//Spring Boot Admin server (控制台服务端, 容器需改为Tomcat, 控制台地址: http://localhost:8080, 可以改URL, 见application.yaml)
-//@EnableAdminServer
+//Spring Boot Admin server (控制台服务端, 容器需改为Tomcat, 控制台地址: http://localhost:8080/admin, 改过URL(默认没/admin), 见application.yaml)
+@EnableAdminServer
 public class BootApplication {
 
 //    private static volatile boolean shutdown = false;
