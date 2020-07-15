@@ -12,7 +12,8 @@ import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Micrometer示例
+ * Micrometer示例,
+ * 单用Micrometer不需要依赖io.micrometer:micrometer-registry-prometheus, 要连Prometheus才需要
  *
  * @author S.Violet
  */
@@ -34,10 +35,14 @@ public class MicrometerController {
 
     @PostConstruct
     private void init(){
-        testCounter = meterRegistry.counter("test-counter","method","test");
-        testTimer = meterRegistry.timer("test-timer", "method", "test");
-        testSummary = meterRegistry.summary("test-summary","method","test");
-        testGauge = meterRegistry.gauge("test-gauge", Tags.of("method", "test"), new AtomicInteger(0));
+        //单纯计数
+        testCounter = meterRegistry.counter("micrometer-test","type","counter");
+        //计数+耗时+最大值
+        testTimer = meterRegistry.timer("micrometer-test", "type", "timer");
+        //追踪数据分布
+        testSummary = meterRegistry.summary("micrometer-test","type","summary");
+        //自由控制数值
+        testGauge = meterRegistry.gauge("micrometer-test", Tags.of("type", "gauge"), new AtomicInteger(0));
     }
 
     /**
