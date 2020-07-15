@@ -36,13 +36,13 @@ public class MicrometerController {
     @PostConstruct
     private void init(){
         //单纯计数
-        testCounter = meterRegistry.counter("micrometer-test","type","counter");
+        testCounter = meterRegistry.counter("micrometer-test-counter","type","1");
         //计数+耗时+最大值
-        testTimer = meterRegistry.timer("micrometer-test", "type", "timer");
+        testTimer = meterRegistry.timer("micrometer-test-timer", "type", "1");
         //追踪数据分布
-        testSummary = meterRegistry.summary("micrometer-test","type","summary");
+        testSummary = meterRegistry.summary("micrometer-test-summary","type","1");
         //自由控制数值
-        testGauge = meterRegistry.gauge("micrometer-test", Tags.of("type", "gauge"), new AtomicInteger(0));
+        testGauge = meterRegistry.gauge("micrometer-test-gauge", Tags.of("type", "1"), new AtomicInteger(0));
     }
 
     /**
