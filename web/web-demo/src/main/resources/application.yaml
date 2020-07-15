@@ -26,9 +26,14 @@ spring:
     admin:
       ## Config in server, admin url adjusted from http://localhost:port to http://localhost:port/admin
       context-path: /admin
+      ## Config in client
       client:
-        ## The url of admin server, config in client, admin url adjusted from http://localhost:port to http://localhost:port/admin
+        ## The url of admin server, admin url adjusted from http://localhost:port to http://localhost:port/admin
         url: http://localhost:${server.port:8080}/admin
+        ## The information of client
+        instance:
+          service-base-url: http://localhost:${server.port:8080}/
+          service-path: /
   ## Datasource 1: H2 (Do not exclude DataSourceAutoConfiguration!)
   datasource:
     driver-class-name: org.h2.Driver

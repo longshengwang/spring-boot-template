@@ -43,6 +43,11 @@ projects.forEach({ groupKey, group ->
             project(":$module").projectDir = file("../$groupKey/$module")
         }
 
+        // 检查模块目录是否存在
+        if (!project(":$module").projectDir.isDirectory()) {
+            throw new GroovyRuntimeException("Module directory '" + project(":$module").projectDir + "' is not exists (or not a directory)")
+        }
+
     })
 })
 
